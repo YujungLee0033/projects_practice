@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Pet Diary</title>
+    <style>
+        body{
+            text-align: center;
+            justify-content: space-between;
+            background-color: rgb(229, 243, 200);
+            font-size: 16px;
+            font-family: Consolas, sans-serif;
+        }
+        
+        img{
+            width: 450px; height: 300px;
+            border-radius: 10%;
+            border: 5px solid rgb(138, 102, 64);
+        }
+
+        [type="submit"]{
+            width: 100px; height: 30px;
+            background-color: rgb(201, 184, 88); color: rgb(255, 255, 255);
+            border: none; border-radius: 8px;
+        }
+        [type="submit"]:hover{
+            background-color: rgb(226, 150, 43);
+        }
+
+        [type="submit"]:active{
+            background-color: rgb(30, 5, 54);
+        }
+        
+        textarea:focus{
+            color: white;
+            background-color: rgb(217, 198, 166);
+        }
+
+    </style>
+</head>
+<body>
+    <h1 style="color: rgb(64, 32, 94);">My pet diary</h1>
+    <form action="index.php" method="POST">
+        <p>Today : <input type="date"></p>
+        <div id="img"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSigYq1kqyDo4tAfLLwPkE3_px4Pmi4FFAuOw&usqp=CAU"></div>
+        <p>Brith : <input type="date"></p>
+        <p>Name : <input placeholder="insert pet's name"></p>
+        <p>Weight : <input type="number" placeholder="insert pet's Weight"></p>
+        <p>sex :
+            <select name="sex">
+                <option value="boy">Boy</option>
+                <option value="girl">Girl</option>
+            </select>
+        </p>
+        
+        <p>Memo<br>
+            <textarea style="width: 450px; height: 200px;"></textarea>
+        </p>
+
+        <input type="submit" value="Save">
+
+    </form>
+
+</body>
+</html>

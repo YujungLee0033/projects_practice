@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * { 
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background-color: lightgray;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 500px;
+            flex-wrap: wrap;
+            margin:10% auto;
+        }
+
+        .container > h1 {
+            color: rgb(88, 88, 88);
+        }
+
+        .memoBox {
+            border: 2px solid gray;
+            border-radius: 15px;
+            background-color: white;
+            width: 500px; height: 450px;
+            margin: 10px;
+            padding: 10px;
+            margin-bottom: 0px;
+            display: flex;
+            justify-content: space-around;
+
+            flex-wrap: wrap;
+            overflow: auto;
+            padding: 10px;
+        }
+
+        .textBox {
+            display: flex;
+            justify-content: space-between;
+            width: 500px;
+            padding: 10px;
+            margin-top: 0px;
+            height: auto;
+        }
+
+        .textBox > textarea {
+            border: .5px solid gray;
+            border-radius: 10px;
+            width: auto;
+            height: 50px;
+            flex: 1;
+            margin-right: 5px;
+        }
+
+        .textBox > button {
+            border: 0px;
+            background-color: gray;
+            color: whitesmoke;
+            border-radius: 10px;
+            width: 90px;
+        }
+
+        .memo {
+            width: 180px; height: 170px;
+            background-image: url('https://cdn.pixabay.com/photo/2017/03/18/17/39/notepad-2154572_1280.png');
+            background-size: 190px 190px;
+            background-position: center;
+            
+            align-items: center;
+            justify-content: center;
+            text-align: left;
+            padding: 40px 13px 13px 13px;
+            white-space: pre-line;
+            flex-wrap: wrap;
+            overflow-wrap: break-word;
+            margin-bottom: 0;
+        }
+
+        .memoBox > div {
+            display: flex;
+            align-items: center;
+            margin: 0;
+        
+
+        }
+
+        .smallBox {
+            width: 180px; height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin: 0;
+        }
+
+        .smallBox > button {
+            width: 20px; height: 20px;
+            border-radius: 18px;
+            border: 0;
+            background-color: gray;
+            color: white;
+            margin: 0;
+            margin-right: 5px;
+        }
+
+        .smallBox > p {
+            color: gray;
+            margin: 0;
+            margin-left: 5px;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>메모장</h1>
+        <div class="textBox">
+            <textarea></textarea>
+            <button>저장</button>
+        </div>
+        <div class="memoBox">
+        </div>
+       
+    </div>
+
+
+
+    <script src="memo.js"></script>
+</body>
+</html>

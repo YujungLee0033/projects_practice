@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            margin: 0;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .app {
+            width: 350px; height: 550px;
+            text-align: center;
+            justify-content: space-between;
+        }
+
+        .app > h1 {
+            background-color: lightblue;
+            border-top-left-radius: 16px;
+            border-top-right-radius: 16px;
+            margin: 0;
+            padding: 10px;
+            border-bottom: 0.7px solid whitesmoke;
+            text-align: center;
+        }
+
+        .listBox {
+            width: 350px; height: 450px;
+            background-color: lightblue;
+            text-align: right;
+            padding: 10px;
+            font-size: 18px;
+        }
+    
+        .inputBox {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 0;
+            background-color: lightgoldenrodyellow;
+            height: 55px;
+            border-bottom-right-radius: 16px;
+            border-bottom-left-radius: 16px;
+            
+        }
+
+        .inputBox > input {
+            width: auto;
+            margin-left: 10px;
+            border: none;
+            padding: 5px;
+            flex: 1;
+            background-color: lightgoldenrodyellow;
+            
+        }
+        
+        .inputBox > Button {
+            border: none;
+            border-radius: 25px;
+            background-color: rgb(240, 230, 143);
+            margin: 10px;
+            padding: 15px;
+            justify-self: right;
+        }
+
+        .smallBox > span {
+            border-radius: 5px;
+            background-color: rgb(243, 243, 104);
+            width: 350px; height: 150px;
+            white-space: normal;
+            padding: 5px;
+            text-align: left;
+        }
+    
+        .smallBox > button {
+            border: 0;
+            border-radius: 50%;
+            background-color: whitesmoke;
+            margin: 9px;
+        }
+
+        .smallBox > .spanClicked {
+            background-color: rgb(186, 186, 186);
+            color: white;
+        }
+
+
+    </style>
+
+</head>
+<body>
+
+
+    <script src="todo.js"></script>
+</body>
+</html>

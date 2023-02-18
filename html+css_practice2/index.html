@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>주축 교차축</title>
+    <style>
+        *{
+            text-align: center;
+            background-color: silver;
+
+        }
+
+        .container{
+            display: flex; 
+            width: 300px; height: 300px;
+            border: 3px solid rgb(67, 21, 206);
+            justify-content: space-between;
+            align-items: center;
+            margin: auto;
+            background-color: rgb(95, 163, 141);
+        }
+
+        .item:hover{
+            background-color: aliceblue;
+        }
+
+        .item:active{
+            background-color: blue;
+        }
+
+        .item{
+            display: flex; 
+            width: 50px; height: 50px;
+            background-color: rgb(171, 207, 10);
+            border: 1px solid rgb(162, 162, 205);
+        }
+
+        .two{
+            align-self: flex-start;
+
+        }
+
+
+        .four{
+            align-self: flex-end;
+        }
+
+</style>
+</head>
+<body>
+    <h1  style="color: darkblue;">숨은 버튼 찾기</h1>
+    <br>
+    <div class="container">
+        <div class="item one"></div> 
+        <div class="item two"></div>
+        <div class="item three"></div>
+        <div class="item four"></div> 
+        <div class="item five" >
+            <form action="index.php" method="POST">
+                <input class="item" type="submit" value=""
+                style="border: 0px;">
+            </form> 
+        </div>
+    </div>
+</body>
+</html>
