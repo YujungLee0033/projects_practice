@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            font-size: 18px;
+        }
+
+        body {
+            margin: 0;
+            background-color: lightgoldenrodyellow;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+        }
+
+        .app {
+            position: relative;
+            width: 600px; min-width: 600px;
+            height: 600px;
+            border-radius: 0 0 8px 8px;
+            text-align: center;
+            margin-top: 15%;
+        }
+        
+        .app > h2 {
+            color: rgb(181, 132, 7)
+        }
+
+
+        .starting > h1 {
+            color: goldenrod;
+        }
+
+        button {
+            font-size: 24px;
+            width: 290px; height: 40px;
+            border: 0;
+            color: aliceblue;
+            border: 2px solid palegoldenrod;
+            background-color: goldenrod;
+            cursor: pointer;
+            margin-top: 10px;
+            border-radius: 5px;
+        }
+
+        button:active {
+            background-color: gold;
+        }
+
+        .app > .photoBox {
+            height: 360px;
+            background-size: 100% 100%;
+            border: 3px solid darkgoldenrod;
+            border-radius: 10px;
+        }
+
+        .app > .previous {
+            float: left;
+            border-radius: 0 0 0 8px;
+        }
+
+        .app > .next {
+            float: right;
+            border-radius: 0 0 8px 0;
+        }
+
+
+        .no-photo {
+            display: none;
+        }
+
+        .starting{
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: beige;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 99;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .startBtn {
+            font-size: 32px;
+            height: 50px;
+            border-radius: 10px;
+            box-shadow: 5px 5px 5px 0 gray;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="app">
+            <h2>私を飼って、ワン！</h2>
+            <div class="photoBox" id="photoBox"></div>
+            <button id="previous">前</button>
+            <button id="next">次</button>
+        </div>
+    </div>
+
+    <div id="starting" class="no-photo starting">
+        <h1>あなたが飼うことになる子犬は何でしょうか？！</h1>
+        <button id="startBtn" class="startBtn">START</button>
+    </div>
+
+
+    <script src="photo.js"></script>
+</body>
+</html>
