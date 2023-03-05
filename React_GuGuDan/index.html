@@ -19,8 +19,9 @@
             const [second, setSecond] = React.useState(Math.ceil(Math.random() * 9));
             const [value, setValue] = React.useState('');
             const [result, setResult] = React.useState('');
-            const inputRef = React.useRef(null);
-
+            const inputRef = React.useRef(null);   // 값을 변경해도 상태를 변경할 때 처럼 React 컴포넌트가 다시 랜더링되지 않습니다.
+                                                   // React 컴포넌트가 다시 랜더링될 때도 마찬가지로 이 current 속성의 값이 유실되지 않습니다.
+            
             const onSubmitForm = (e) => {
                 e.preventDefault();   // preventDefault()는 브라우저 고유의 동작을 중단시켜주는 역할을 합니다.
                 if (parseInt(value) === first * second) {   // parseInt는 값을 정수로 변환
@@ -37,7 +38,7 @@
             };
 
             const onChangeInput = (e) => {
-                setValue(e.target.value);
+                setValue(e.target.value);   // e.target은 특정 이벤트가 발생하는 태그를 가르킨다
 
             };
 
@@ -45,8 +46,8 @@
                 <React.Fragment>
                     <div>{first} 곱하기 {second} 는?</div>
                     <form onSubmit={onSubmitForm}>
-                        <input ref={inputRef} onChange={onChangeInput} value={value}/>
-                        <button>입력!</button>
+                        <input ref={inputRef} onChange={onChangeInput} value={value}/>   // onChange는 input 안의 값이 변경될 때에 발생
+                        <button>입력!</button>                                            // 값이 많을땐 [e.target.name]: e.target.value 사용
                     </form>
                     <div id="result">{result}</div>
                 </React.Fragment>
